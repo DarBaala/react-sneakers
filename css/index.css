@@ -6,6 +6,10 @@ body {
   background-color: #e7f6ff;
 }
 
+* {
+  font-family: "inter", system-ui;
+}
+
 .wrapper {
   background: #ffffff;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
@@ -38,6 +42,22 @@ header p {
   width: 220px;
   border-radius: 40px;
   margin-right: 30px;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.card .favorite {
+  position: absolute;
+  cursor: pointer;
 }
 
 .card span {
@@ -64,5 +84,174 @@ header p {
   width: 32px;
   height: 32px;
   cursor: pointer;
+}
+
+.search-block {
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+.search-block input {
+  border: 0;
+  padding: 10px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.drawer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 420px;
+  height: 100%;
+  right: 0;
+  background: #ffffff;
+  -webkit-box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+          box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.drawer .items {
+  overflow: auto;
+  margin-bottom: 40px;
+}
+
+.drawer h2 {
+  margin: 0;
+}
+
+.drawer h2 .removeBtn {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.drawer h2 .removeBtn:hover {
+  opacity: 1;
+}
+
+.items {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.cartTotalBlock ul {
+  margin-bottom: 40px;
+}
+
+.cartTotalBlock ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 40px !important;
+}
+
+.cartTotalBlock ul li div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 1px;
+  border-bottom: 1px dashed #dfdfdf;
+  position: relative;
+  top: -4px;
+  margin: 0 7px;
+}
+
+.cartTotalBlock .greenButton {
+  position: relative;
+}
+
+.cartTotalBlock .greenButton:hover img {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.cartTotalBlock .greenButton img {
+  position: absolute;
+  right: 30px;
+  top: 23px;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  transition: -webkit-transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+}
+
+.greenButton {
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.greenButton:hover {
+  background: #a9da6c;
+}
+
+.greenButton:active {
+  background: #91d044;
+}
+
+.cartItem {
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.cartItem .cartItemImg {
+  height: 70px;
+  width: 70px;
+  background-size: contain;
+  background-position: 0 -3px;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+
+.cartItem p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.cartItem b {
+  font-size: 14px;
+}
+
+.cartItem .removeBtn {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.cartItem .removeBtn:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=index.css.map */
