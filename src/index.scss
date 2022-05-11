@@ -25,26 +25,28 @@ header {
   p {
     margin: 0;
   }
+  span {
+    color: #5c5c5c;
+  }
 }
 .content {
   h1 {
     margin: 0;
   }
 }
-
-.button {
-  background: #ffffff;
-  border: 1px solid #f2f2f2;
-  box-sizing: border-box;
-  border-radius: 8px;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
 .search-block {
-  border: 1px solid #f3f3f3;
+  border: 2px solid #e2e2e2;
   border-radius: 10px;
   padding: 0 15px;
+  position: relative;
+  .search-clear {
+    cursor: pointer;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    right: 15px;
+    top: 13px;
+  }
   input {
     border: 0;
     padding: 10px;
@@ -53,7 +55,7 @@ header {
   }
 }
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -74,6 +76,7 @@ header {
   .items {
     overflow: auto;
     margin-bottom: 40px;
+    flex: 1;
   }
   h2 {
     margin: 0;
@@ -86,8 +89,32 @@ header {
       }
     }
   }
-  .items {
-    flex: 1;
+}
+.cartEmpty {
+  text-align: center;
+
+  p {
+    width: 280px;
+    line-height: 24px;
+  }
+
+  .greenButton {
+    width: 245px;
+    margin-top: 20px;
+
+    &:hover {
+      img {
+        transform: rotate(180deg) translateX(3px);
+      }
+    }
+
+    img {
+      position: relative;
+      top: 1px;
+      transform: rotate(180deg);
+      margin-right: 15px;
+      transition: transform 0.15s ease-in-out;
+    }
   }
 }
 
