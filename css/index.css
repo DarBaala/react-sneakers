@@ -66,7 +66,7 @@ header span {
 }
 
 .overlay {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -176,6 +176,11 @@ header span {
   position: relative;
 }
 
+.cartTotalBlock .greenButton:disabled {
+  -webkit-animation: button-loading 0.8s ease-in-out infinite;
+          animation: button-loading 0.8s ease-in-out infinite;
+}
+
 .cartTotalBlock .greenButton:hover img {
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
@@ -213,6 +218,11 @@ header span {
   background: #91d044;
 }
 
+.greenButton:disabled {
+  background-color: #bebebe;
+  cursor: default !important;
+}
+
 .cartItem {
   border: 1px solid #f3f3f3;
   border-radius: 20px;
@@ -247,5 +257,29 @@ header span {
 
 .cartItem .removeBtn:hover {
   opacity: 1;
+}
+
+@-webkit-keyframes button-loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes button-loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=index.css.map */
