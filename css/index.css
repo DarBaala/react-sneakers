@@ -25,6 +25,7 @@ header {
 
 header img {
   margin-right: 15px;
+  cursor: pointer;
 }
 
 header h3,
@@ -33,7 +34,8 @@ header p {
 }
 
 header span {
-  color: #5c5c5c;
+  color: #9b9b9b;
+  font-weight: 500;
 }
 
 .content h1 {

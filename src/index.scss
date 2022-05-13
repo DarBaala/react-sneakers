@@ -20,13 +20,15 @@ header {
   border-bottom: 1px solid #eaeaea;
   img {
     margin-right: 15px;
+    cursor: pointer;
   }
   h3,
   p {
     margin: 0;
   }
   span {
-    color: #5c5c5c;
+    color: #9b9b9b;
+    font-weight: 500;
   }
 }
 .content {
@@ -55,7 +57,7 @@ header {
   }
 }
 .overlay {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
