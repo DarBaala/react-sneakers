@@ -65,57 +65,6 @@ header span {
   width: 200px;
 }
 
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.drawer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  width: 420px;
-  height: 100%;
-  right: 0;
-  background: #ffffff;
-  -webkit-box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-          box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-}
-
-.drawer .items {
-  overflow: auto;
-  margin-bottom: 40px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.drawer h2 {
-  margin: 0;
-}
-
-.drawer h2 .removeBtn {
-  cursor: pointer;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.15s ease-in-out;
-  transition: opacity 0.15s ease-in-out;
-}
-
-.drawer h2 .removeBtn:hover {
-  opacity: 1;
-}
-
 .cartEmpty {
   text-align: center;
 }
@@ -210,17 +159,17 @@ header span {
   transition: background 0.1s ease-in-out;
 }
 
+.greenButton:disabled {
+  background-color: #bebebe !important;
+  cursor: default;
+}
+
 .greenButton:hover {
   background: #a9da6c;
 }
 
 .greenButton:active {
   background: #91d044;
-}
-
-.greenButton:disabled {
-  background-color: #bebebe;
-  cursor: default !important;
 }
 
 .cartItem {
